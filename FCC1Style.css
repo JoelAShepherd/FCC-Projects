@@ -1,0 +1,41 @@
+<style>
+    html{
+      height: 100%;
+    }
+    body {
+      background-image: linear-gradient(to bottom right, PaleGreen, LightSteelBlue);
+    }
+    h1{
+      display: block;
+      text-decoration: underline;
+      font-size:50px;
+      text-align: center;
+      padding-top: 20px;
+      font-family:"Lucida console", monospace;
+      }
+    h2{
+      text-decoration: underline;
+      font-family:"Lucida console", monospace;
+    }
+    p {
+      font-size: 20px;
+      text-align: justify;
+    }
+    .tribute-info {
+      font-size: 20px;
+      margin-left: 7%;
+      margin-right: 7%;
+    }
+    .image {
+      display: block;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
+    .image-caption {
+      font-size: 18px;
+      font-style: italic;
+      text-align: center;
+    }
+</style>
