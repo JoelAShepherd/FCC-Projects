@@ -1,0 +1,87 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eternal Student Web Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Eternal Student Web Form</h1>
+    <p id="description">Please help us by showing us what you find interesting and would consider studying in the future.</p>
+    <div id="survey">
+      <form id="survey-form" action="url-where-data-will-be-submitted">
+        <div><label for="name" id="name-label">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required></div>
+        <br>
+        <div><label for="email" id="email-label">Email:</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" required></div>
+        <br>
+        <div><label for="age" id="number-label">Age (optional)</label>
+          <input id="number" type="number" name="age" min="12" max="99" placeholder="21"></div>
+        <br>
+        <div><label for="dropdown" id="location-label">Where are you studying?</label>
+        <select id="dropdown" class="dropdown" required placeholder="Continent" name="continent">
+          <option value="Europe">Europe</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="Australasia">Australasia</option>
+          <option value="North-America">North America</option>
+          <option value="South-America">South America</option>
+          </select></div>
+        <br>
+        <div><label for="education" id="education-label">What is your current level of education?
+        <br>
+        <input id="gcses" type="radio" name="education" value="gcses">GCSEs
+        <br>
+        <input id="a-levels" type="radio" name="education" value="a-levels">A-Levels
+        <br>
+        <input id="degree" type="radio" name="education" value="degree">Degree
+        <br>
+        <input id="Masters" type="radio" name="education" value="masters">Masters
+        <br>
+        <input id="doctorate" type="radio" name="education" value="doctorate">Doctorate
+        <br>
+        <label for="other-edu" id="other-edu-label">If not labelled above please enter your level of education:</label>
+          <input id="other-edu" type="text" name="education" placeholder="e.g. PGCE"></div>
+        <br>
+        <div><label>Which languages can you study in?</label>
+        <br>
+        <input type="checkbox" id="lang1" name="lang1" value="english">
+          <label for="lang1">English</label><br>
+        <input type="checkbox" id="lang2" name="lang2" value="french">
+          <label for="lang2">French</label><br>
+        <input type="checkbox" id="lang3" name="lang3" value="spanish">
+        <label for="lang3">Spanish</label><br>
+        <input type="checkbox" id="lang4" name="lang4" value="other">
+          <label for="lang4">Other</label></div>
+        <br>
+        <div><label for="study-areas" id="study-areas-label">Which area are you interested in studying?
+        <br><br>
+        <input id="medicine" type="radio" name="study-area" value="medicine">Medicine
+        <input id="science" type="radio" name="study-area" value="science">Science
+        <input id="mathematics" type="radio" name="study-area" value="mathematics">Mathematics
+         <input id="computer Science" type="radio" name="study-area" value="computer-science">Computer Science
+        <input id="philosophy-and-religion" type="radio" name="study-area" value="philosophy-and-religion">Philosophy and religion
+        <input id="music" type="radio" name="study-area" value="music">Music
+        <input id="art" type="radio" name="study-area" value="arts">Arts
+        <input id="languages" type="radio" name="study-area" value="languages">Languages
+        <input id="literature" type="radio" name="study-area" value="literature">Literature
+          </label></div>
+        <br>
+        <div><label for="specific" id="specific-label">Is there a specific topic you are interested in studying?</label><br>
+          <input id="specific" type="text" name="specific" placeholder="e.g. Marine Biology"></div>
+        <br>
+        <div><label for="feedback" id="feedback-label">Please give us any feeback you have about us:</label>
+        <br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50">Please comment here</textarea></div>
+        <br>
+          <div><button type="submit" id="submit">Submit</button></div>
+
+      </form>
+    </div>
+  </body>
+  <footer>
+    <p class="footer">This web form was designed for FCC's <a href=https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form> Responsive Web Design Project</a>.</p>
+  </footer>
+</html>

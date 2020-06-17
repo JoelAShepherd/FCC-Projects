@@ -1,0 +1,66 @@
+<style>
+html{
+  height: 100%;
+
+}
+body{
+  background-image: url(https://storage.needpix.com/rsynced_images/lilac-haze-background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1{
+  text-align: center;
+  text-decoration: underline;
+  font-family: impact, fantasy;
+}
+p{
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 25px;
+  text-align: center;
+}
+div{
+  display: block;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+}
+input{
+  font-size:20px;
+  font-family: "Lucida Console", Courier, monospace;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input:focus{
+   background-color: lightblue;
+}
+input[type=text]{
+  width: 25%;
+
+}
+input[type=email]{
+  width: 25%;
+}
+label{
+  font-size:20px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.dropdown{
+  font-size:20px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+button{
+  font-size:20px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+textarea{
+  font-size:20px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+.footer{
+  text-align: left;
+  font-size:15px;
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+</style>
