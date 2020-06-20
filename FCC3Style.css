@@ -1,0 +1,133 @@
+<style>
+html{
+  hieght:100%;
+}
+.header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: lightblue;
+  justify-content: space-between;
+
+}
+h1{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo{
+  width:60px;
+  height: auto;
+}
+.navbar{
+  diplay: flex;
+  width: 60%;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.nav-link{
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgreen;
+  padding: 15px;
+  border: 1px solid blue;
+  border-radius: 6px;
+}
+.nav-link:hover{
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(160, 255, 160);
+  padding: 15px;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+body{
+  background-color: rgba(240, 240, 240, 0.68) !important;
+  background-image: url(https://i1.pickpik.com/photos/958/831/831/books-bookcase-library-bookshelf-preview.jpg);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+.vid{
+  text-align: center;
+}
+.form{
+  font-size: 25px;
+  text-align: center;
+}
+h2{
+  text-decoration: underline;
+}
+p{
+  font-size: 20px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.box1{
+  width: 300px;
+  background-color: white;
+  border: 6px solid green;
+  border-radius: 30%;
+}
+.box2{
+  width: 300px;
+  background-color: white;
+  border: 6px solid green;
+  border-radius: 30%;
+}
+.box3{
+  width: 300px;
+  background-color: white;
+  border: 6px solid green;
+  border-radius: 30%;
+}
+.box1:hover{
+  background-color: rgba(240, 240, 240, 0.68) !important;
+  background-image: url(https://p1.pxfuel.com/preview/227/199/712/sci-fi-surgery-room-sci-fi-surgery-room.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+}
+.box2:hover{
+  background-color: rgba(240, 240, 240, 0.68) !important;
+  background-image: url(https://www.publicdomainpictures.net/pictures/160000/velka/love-hearts-1460204535AKf.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+}
+.box3:hover{
+  background-color: rgba(240, 240, 240, 0.68) !important;
+  background-image: url(https://p1.pxfuel.com/preview/788/361/133/dice-games-cubes-games-cube-cubes-games-gaming.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+}
+.boxh2{
+  text-align: center;
+}
+.boxp{
+  text-align: justify;
+  padding: 10px 10px 0px 10px;
+}
+.buybox{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.button{
+  align-content: center;
+  width: 80px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 9px;
+  background-color: white !important;
+  font-size: 25px;
+  cursor: pointer;
+}
+</style>

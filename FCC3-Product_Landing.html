@@ -3,38 +3,62 @@
 <!DOCTYPE html>
 
 <html>
-  <header id="header">
-    <div class="header">
-      <h1>Bargain Book Basement</h1>
-    <img id="header-img" src="https://i.pinimg.com/236x/34/6a/1f/346a1f4363e1b59f6860fdce6abc1082--icons-church.jpg">
-    </div>
-    <nav id="nav-bar" class="header">
+  <header id="header" class="header">
+    <link rel="stylesheet" type="text/css" href="FCC3Style.css">
+    <h1>Bargain Book Basement</h1>
+    <img id="header-img" class="logo" src="https://cdn.pixabay.com/photo/2017/01/31/00/09/book-2022464_960_720.png">
+    <nav id="nav-bar" class="navbar">
       <ul class="menu">
-        <li class="nav-link">Who we are</li>
-        <li class="nav-link">What we do</li>
-        <li class="nav-link">Book Bundles</li>
+        <li class="nav-link" href=#who-we-are><a href=#who-we-are>Who we are</a></li>
+        <li class="nav-link" href=#what-we-do><a href=#what-we-do>What we do</a></li>
+        <li class="nav-link" href=#book-bundles><a href=#book-bundles>Book Bundles</a></li>
       </ul>
     </nav>
   </header>
   <body>
-    <div>video</div>
+    <div class="vid">
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/T3HxkKq-RQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div id="signup">
-      <form id="signup-form" action=" https://www.freecodecamp.com/email-submit">
-      <label for="signup">Sign up for our monthly newsletter!</label>
-      <input id="signup" name="signup" type="email" placeholder="Your email here" required>
-      <button type="submit" form="signup-form" value="sign up!">Sign up!</button>
+      <form id="form" class="form" action=" https://www.freecodecamp.com/email-submit">
+        <label for="signup">Sign up for our monthly newsletter!</label>
+        <input id="email" name="email" type="email" placeholder="Your email here" required class="form">
+        <input id="submit" type="submit" form="form" value="Sign up!" class="form">
       </form>
     </div>
-    <div id="who we are">
-      <h3>Who we are</h3>
-      <p>We are one of the UK's biggest second-hand book stores. We have a vast range of books from all over the world - aged from nearly-new to over 150 years. We believe passionately that book if a book is worth reading then it is worth sharing.</p>
+    <div id="who-we-are">
+      <h2>Who we are</h2>
+      <p><b>We are one of the UK's biggest second-hand book stores. We have a vast range of books from all over the world - aged from nearly-new to over 150 years. We believe passionately that book if a book is worth reading then it is worth sharing.</b></p>
     </div>
-    <div id="what we do">
-      <h3>What we do</h3>
-      <p>We buy books second-hand from people from all walks of life and make them available for new readers. We sell the books instore but also dispatch book bundles - collections of books, either random or themed, which can be sent out in the post anywhere in the UK.
+    <div id="what-we-do">
+      <h2>What we do</h2>
+      <p><b>We buy books second-hand from people from all walks of life and make them available for new readers. We sell the books instore but also dispatch book bundles - collections of books, either random or themed, which can be sent out in the post anywhere in the UK.</b></p>
     </div>
-    <div id="book bundles">
-      <h3>Book Bundles<h3>
+    <div id="book-bundles">
+      <h2>Book Bundles</h2>
+      <div id="container" class="container">
+        <div id="box1" class="box1">
+            <h2 class="boxh2">Sci-Fi Bundle</h2>
+            <p class="boxp"><b>Explore a selected range of five books that can take you across the universe and back again!</b></p>
+          <div id="buybox1" class="buybox">
+            <button id="buybutton1" class="button">£8.99</button>
+           </div>
+        </div>
+        <div id="box2" class="box2">
+          <h2 class="boxh2">Romantic Bundle</h2>
+          <p class="boxp"><b>Love to read about love? Then tug on those heart strings with a selection of five romantic books!</b></p>
+          <div id="buybox1" class="buybox">
+            <button id="buybutton2" class="button">£8.99</button>
+          </div>
+        </div>
+        <div id="box3" class="box3">
+          <h2 class="boxh2">Random Bundle</h2>
+          <p class="boxp"><b>If variety is the spice of life, spice up your reading with a selection of five books from across our vast collection!</b></p>
+          <div id="buybox1" class="buybox">
+            <button id="buybutton3" class="button">£8.99</button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <footer>
