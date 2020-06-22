@@ -130,4 +130,19 @@ p{
   font-size: 25px;
   cursor: pointer;
 }
+@media (max-width: 1042px) {
+  body{
+    padding-top: 120px;
+  }
+  .form{
+    font-size: 20px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .boxh2{
+    padding: 0px 12px;
+  }
+
+}
 </style>
