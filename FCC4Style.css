@@ -1,0 +1,60 @@
+<style>
+html {
+  height: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+.navbar {
+  display: flex;
+  position: relative;
+  background-color: lightblue;
+  position: fixed;
+  width: 150px;
+  height: 100%;
+}
+.navbar .sidebar {
+  display: flex;
+  position: relative;
+  background-color: lightgreen;
+
+}
+.navbar .sidebar ul li {
+  padding: 10px;
+  border-bottom: 1px solid;
+  display: block;
+}
+.main-section{
+  margin-left: 160px;
+  padding: 10px;
+  border-bottom: 3px solid;
+
+}
+.main-section h2{
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+.main-section p{
+  padding: 15px 0;
+}
+.main-section ul li{
+  padding: 10px;
+}
+mark{
+  background-color: lightgray;
+}
+.code{
+  background-color: lightgray;
+
+}
+.code code{
+  font-family: "Courier New", Courier, monospace;
+}
+footer{
+  margin-left: 150px;
+  text-align: center;
+}
+</style>

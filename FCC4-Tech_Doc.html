@@ -2,12 +2,25 @@
 
 <!DOCTYPE html>
 <html>
-  <header>
-
-
-  </header>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <nav id="navbar" class="navbar">
+      <header></header>
+       <ul>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/146px-Javascript_badge.svg.png">
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <li><a href="#javascript_and_java"class="nav-link">JavaScript and Java</a></li>
+        <li><a href="#javascript_and_the_ecmascript_specification" class="nav-link">JavaScript and the ECMAScript Specification</a></li>
+        <li><a href="#basics" class="nav-link">Basics</a></li>
+        <li><a href="#comments" class="nav-link">Comments</a></li>
+        <li><a href="#declarations" class="nav-link">Declarations</a></li>
+        <li><a href="#evaluating_variables" class="nav-link">Evaluating Variables</a></li>
+        <li><a href="#variable_scope" class="nav-link">Variable Scope</a></li>
+        <li><a href="#references" class="nav-link">References</a></li>
+        </ul></div>
+    </nav>
+  </head>
   <body>
-    
     <main id="main-doc">
       <section class="main-section" id="introduction">
         <header><h2>Introduction</h2></header>
@@ -35,9 +48,13 @@
         <header><h2>Basics</h2></header>
         <p>JavaScript borrows most of its syntax from Java, C, and C++, but it has also been influenced by Awk, Perl, and Python.</p>
         <p>JavaScript is <b>case-sensitive</b> and uses the <b>Unicode</b> character set. For example, the word Früh (which means "early" in German) could be used as a variable name.</p>
-        <code>
-          let Früh = "foobar"
-        </code>
+        <div class="code">
+          <pre>
+            <code>
+            let Früh = "foobar"
+            </code>
+          </pre>
+        </div>
         <p>But, the variable früh is not the same as Früh because JavaScript is case sensitive.</p>
         <p>In JavaScript, instructions are called statements and are separated by semicolons (;).</p>
         <p>A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they must be separated by semicolons.</p>
@@ -45,17 +62,19 @@
       <section class="main-section" id="comments">
         <header><h2>Comments</h2></header>
         <p>The syntax of <b>comments</b> is the same as in C++ and in many other languages:</p>
-        <pre>
-        <code>
-          // a one line comment
+        <div class="code">
+          <pre>
+            <code>
+            // a one line comment
 
-          /* this is a longer,
-           * multi-line comment
-           */
+            /* this is a longer,
+             * multi-line comment
+             */
 
-          /* You can't, however, /* nest comments */ SyntaxError */
-        </code>
-        </pre>
+            /* You can't, however, /* nest comments */ SyntaxError */
+            </code>
+          </pre>
+        </div>
         <p>Comments behave like whitespace, and are discarded during script execution.</p>
       </section>
       <section class="main-section" id="declarations">
@@ -67,10 +86,105 @@
           <li><b><i><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" target="_blank">const</a></b></i> - Declares a block-scoped, read-only named constant.</li>
         </ul>
       </section>
-      <section class="main-section">
-        <header></header>
+      <section class="main-section" id="evaluating_variables">
+        <header><h2>Evaluating variables</h2></header>
+        <p>A variable declared using the <mark>var</mark> or <mark>let</mark> statement with no assigned value specified has the value of <mark>undefined</mark>.</p>
+        <p>An attempt to access an undeclared variable results in a <mark>ReferenceError</mark> exception being thrown:</p>
+        <div class="code">
+          <pre>
+            <code>
+            var a;
+            console.log('The value of a is ' + a); // The value of a is undefined
+
+            console.log('The value of b is ' + b); // The value of b is undefined
+            var b;
+            // This one may puzzle you until you read 'Variable hoisting' below
+
+            console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
+
+            let x;
+            console.log('The value of x is ' + x); // The value of x is undefined
+
+            console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
+            let y;
+            </code>
+          </pre>
+        </div>
+        <p>You can use <mark>undefined</mark> to determine whether a variable has a value. In the following code, the variable <mark>input</mark> is not assigned a value, and the <mark>if</mark> statement evaluates to <mark>true</mark>.</p>
+        <div class="code">
+          <pre>
+            <code>
+            var input;
+            if (input === undefined) {
+              doThis();
+            } else {
+              doThat();
+            }
+            </code>
+          </pre>
+        </div>
+        <p>The <mark>undefined</mark> value behaves as <mark>false</mark> when used in a boolean context. For example, the following code executes the function <mark>myFunction</mark> because the <mark>myArray</mark> element is <mark>undefined</mark>:</p>
+        <div class="code">
+          <pre>
+            <code>
+            var myArray = [];
+            if (!myArray[0]) myFunction();
+            </code>
+          </pre>
+        </div>
+        <p>The <mark>undefined</mark> value converts to <mark>NaN</mark> when used in numeric context.</p>
+        <div class="code">
+          <pre>
+            <code>
+            var a;
+            a + 2;  // Evaluates to NaN
+            </code>
+          </pre>
+        </div>
+        <p>When you evaluate a <mark>null</mark> variable, the null value behaves as <mark>0</mark> in numeric contexts and as <mark>false</false> in boolean contexts. For example:</p>
+        <div class="code">
+          <pre>
+            <code>
+            var n = null;
+            console.log(n * 32); // Will log 0 to the console
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section class="main-section" id="variable_scope">
+        <header><h2>Variable scope</h2></header>
+        <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
+        <p>JavaScript before ECMAScript 2015 does not have block statement scope. Rather, a variable declared within a block is local to the function (or global scope) that the block resides within.</p>
+        <p>For example, the following code will log <mark>5</mark>, because the scope of <mark>x</mark> is the global context (or the function context if the code is part of a function). The scope of <mark>x</mark> is not limited to the immediate <mark>if</mark> statement block.</p>
+        <div class="code">
+          <pre>
+            <code>
+            if (true) {
+            var x = 5;
+            }
+            console.log(x);  // x is 5
+            </code>
+          </pre>
+        </div>
+        <p>This behavior changes when using the <mark>let</mark> declaration (introduced in ECMAScript 2015).</p>
+        <div class="code">
+          <pre>
+            <code>
+            if (true) {
+            let y = 5;
+            }
+            console.log(y);  // ReferenceError: y is not defined
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section class="main-section" id="references">
+        <header><h2>References</h2></header>
+        <p>All the documentation from this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></p>
       </section>
     </main>
   </body>
-  <footer></footer>
+  <footer>
+    <p>This website was designed for the <a href ="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page">FCC Responsive Web Design Project 4</a>.
+  </footer>
 </html>
