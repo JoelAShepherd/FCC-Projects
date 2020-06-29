@@ -3,11 +3,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="FCC4Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <nav id="navbar" class="navbar">
       <header></header>
        <ul>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/146px-Javascript_badge.svg.png">
+        <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Javascript_badge.svg/146px-Javascript_badge.svg.png">
         <a href="#introduction" class="nav-link">Introduction</a>
         <li><a href="#javascript_and_java"class="nav-link">JavaScript and Java</a></li>
         <li><a href="#javascript_and_the_ecmascript_specification" class="nav-link">JavaScript and the ECMAScript Specification</a></li>
@@ -48,12 +49,16 @@
         <header><h2>Basics</h2></header>
         <p>JavaScript borrows most of its syntax from Java, C, and C++, but it has also been influenced by Awk, Perl, and Python.</p>
         <p>JavaScript is <b>case-sensitive</b> and uses the <b>Unicode</b> character set. For example, the word Früh (which means "early" in German) could be used as a variable name.</p>
-        <div class="code">
-          <pre>
-            <code>
-            let Früh = "foobar"
-            </code>
-          </pre>
+        <div class="outer">
+          <code>  <!-- 'code' tag added to satify FCC checking system,
+                  used originaly in code with 'pre' tag but these
+                 tags prevented the text being responsive.-->
+          <div class="inner">
+            <p class="code">
+            1|  let Früh = "foobar"
+            </p>
+          </div>
+        </code>
         </div>
         <p>But, the variable früh is not the same as Früh because JavaScript is case sensitive.</p>
         <p>In JavaScript, instructions are called statements and are separated by semicolons (;).</p>
@@ -62,18 +67,20 @@
       <section class="main-section" id="comments">
         <header><h2>Comments</h2></header>
         <p>The syntax of <b>comments</b> is the same as in C++ and in many other languages:</p>
-        <div class="code">
-          <pre>
-            <code>
-            // a one line comment
-
-            /* this is a longer,
-             * multi-line comment
-             */
-
-            /* You can't, however, /* nest comments */ SyntaxError */
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  // a one line comment<br>
+            2|<br>
+            3|  /* this is a longer,<br>
+            4|   * multi-line comment<br>
+            5|   */<br>
+            6|<br>
+            7|  /* You can't, however, /* nest comments */ SyntaxError */
+            </p>
+          </div>
+        </code>
         </div>
         <p>Comments behave like whitespace, and are discarded during script execution.</p>
       </section>
@@ -90,65 +97,79 @@
         <header><h2>Evaluating variables</h2></header>
         <p>A variable declared using the <mark>var</mark> or <mark>let</mark> statement with no assigned value specified has the value of <mark>undefined</mark>.</p>
         <p>An attempt to access an undeclared variable results in a <mark>ReferenceError</mark> exception being thrown:</p>
-        <div class="code">
-          <pre>
-            <code>
-            var a;
-            console.log('The value of a is ' + a); // The value of a is undefined
-
-            console.log('The value of b is ' + b); // The value of b is undefined
-            var b;
-            // This one may puzzle you until you read 'Variable hoisting' below
-
-            console.log('The value of c is ' + c); // Uncaught ReferenceError: c is not defined
-
-            let x;
-            console.log('The value of x is ' + x); // The value of x is undefined
-
-            console.log('The value of y is ' + y); // Uncaught ReferenceError: y is not defined
-            let y;
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  var a;<br>
+            2|  console.log('The value of a is ' + a);<br>
+            3|  // The value of a is undefined<br>
+            4|<br>
+            5|  console.log('The value of b is ' + b);<br>
+            6|  var b;<br>
+            7|  // The value of b is undefined<br>
+            8|<br>
+            9|  console.log('The value of c is ' + c);<br>
+           10|  // Uncaught ReferenceError: c is not defined<br>
+           11|<br>
+           12|  let x;<br>
+           13|  console.log('The value of x is ' + x);<br>
+           14|  // The value of x is undefined<br>
+           15|<br>
+           16|  console.log('The value of y is ' + y);<br>
+           17|  let y;<br>
+           18|  // Uncaught ReferenceError: y is not defined
+            </p>
+          </div>
+          </code>
         </div>
         <p>You can use <mark>undefined</mark> to determine whether a variable has a value. In the following code, the variable <mark>input</mark> is not assigned a value, and the <mark>if</mark> statement evaluates to <mark>true</mark>.</p>
-        <div class="code">
-          <pre>
-            <code>
-            var input;
-            if (input === undefined) {
-              doThis();
-            } else {
-              doThat();
-            }
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  var input;<br>
+            2|  if (input === undefined) {<br>
+            3|    doThis();<br>
+            4|  } else {<br>
+            5|    doThat();<br>
+            6|  }
+            </p>
+          </div>
+        </code>
         </div>
         <p>The <mark>undefined</mark> value behaves as <mark>false</mark> when used in a boolean context. For example, the following code executes the function <mark>myFunction</mark> because the <mark>myArray</mark> element is <mark>undefined</mark>:</p>
-        <div class="code">
-          <pre>
-            <code>
-            var myArray = [];
-            if (!myArray[0]) myFunction();
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  var myArray = [];<br>
+            2|  if (!myArray[0]) myFunction();
+            </p>
+          </div>
+          <code>
         </div>
         <p>The <mark>undefined</mark> value converts to <mark>NaN</mark> when used in numeric context.</p>
-        <div class="code">
-          <pre>
-            <code>
-            var a;
-            a + 2;  // Evaluates to NaN
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  var a;<br>
+            2|  a + 2;  // Evaluates to NaN
+            </p>
+          </div>
+        </code>
         </div>
         <p>When you evaluate a <mark>null</mark> variable, the null value behaves as <mark>0</mark> in numeric contexts and as <mark>false</false> in boolean contexts. For example:</p>
-        <div class="code">
-          <pre>
-            <code>
-            var n = null;
-            console.log(n * 32); // Will log 0 to the console
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="inner">
+            1|  var n = null;<br>
+            2|  console.log(n * 32); // Will log 0 to the console
+            </p>
+          </div>
+        </code>
         </div>
       </section>
       <section class="main-section" id="variable_scope">
@@ -156,26 +177,30 @@
         <p>When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.</p>
         <p>JavaScript before ECMAScript 2015 does not have block statement scope. Rather, a variable declared within a block is local to the function (or global scope) that the block resides within.</p>
         <p>For example, the following code will log <mark>5</mark>, because the scope of <mark>x</mark> is the global context (or the function context if the code is part of a function). The scope of <mark>x</mark> is not limited to the immediate <mark>if</mark> statement block.</p>
-        <div class="code">
-          <pre>
-            <code>
-            if (true) {
-            var x = 5;
-            }
-            console.log(x);  // x is 5
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  if (true) {<br>
+            2|  var x = 5;<br>
+            3|  }<br>
+            4|  console.log(x);  // x is 5<br>
+            </p>
+          </div>
+        </code>
         </div>
         <p>This behavior changes when using the <mark>let</mark> declaration (introduced in ECMAScript 2015).</p>
-        <div class="code">
-          <pre>
-            <code>
-            if (true) {
-            let y = 5;
-            }
-            console.log(y);  // ReferenceError: y is not defined
-            </code>
-          </pre>
+        <div class="outer">
+          <code>
+          <div class="inner">
+            <p class="code">
+            1|  if (true) {<br>
+            2|  let y = 5;<br>
+            3|  }<br>
+            4|  console.log(y);  // ReferenceError: y is not defined
+            </p>
+          </div>
+        </code>
         </div>
       </section>
       <section class="main-section" id="references">
